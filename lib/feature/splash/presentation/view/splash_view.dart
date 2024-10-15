@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mtb/core/constant/colors_style.dart';
 
-import '../../../auth/presentation/view/Login_view.dart';
+import '../../../onBoarding_view/presentation/view/onBoarding_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -23,9 +23,9 @@ class _SplashViewState extends State<SplashView> {
 
   void timerNav() {
     Timer(
-      Duration(seconds: 3),() => Navigator.pushReplacement(
+      Duration(seconds: 2),() => Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginView()),
+      MaterialPageRoute(builder: (context) => OnboardingView()),
     )
     );
   }
