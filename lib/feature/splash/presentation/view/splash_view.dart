@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mtb/core/constant/colors_style.dart';
 
-import '../../../onBoarding_view/presentation/view/onBoarding_view.dart';
+import '../../../onBoarding_view/presentation/view/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constant/fontStyle.dart';
 import '../../data/model/onBoarding_model.dart';
-import '../view/onBoarding_view.dart';
 
 class PageViewWidget extends StatelessWidget {
 
@@ -18,9 +17,11 @@ class PageViewWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        SizedBox(height: 40,),
         Text(onBoardingData.title, textAlign: TextAlign.center,style: AppText.semiBold16,),
         Text(onBoardingData.subtitle,
           textAlign: TextAlign.center,style: AppText.smallText14,),
+        SizedBox(height: 60,),
         Image.asset(onBoardingData.image)
       ],
     );

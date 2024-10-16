@@ -40,12 +40,12 @@ class Themes {
       labelStyle : AppText.smallText14,
       errorStyle: AppText.smallText14.copyWith(color: Colors.red),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColor.mainColor,width: 1),
+        borderSide: BorderSide(color: AppColor.gray,width: 1),
         borderRadius: BorderRadius.all(Radius.circular(8)),
 
         ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColor.gray,width: 1),
+        borderSide: BorderSide(color: AppColor.mainColor,width: 1),
         borderRadius: BorderRadius.all(Radius.circular(8)),
 
       ),

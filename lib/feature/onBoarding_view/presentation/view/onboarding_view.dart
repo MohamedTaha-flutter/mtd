@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mtb/core/app_string/string.dart';
-import 'package:mtb/core/constant/fontStyle.dart';
-
+import 'package:mtb/feature/onBoarding_view/presentation/widget/bottom_sheet_widget.dart';
 import '../../data/model/onBoarding_model.dart';
 import '../widget/pageView_widget.dart';
 
@@ -15,11 +14,10 @@ class OnboardingView extends StatefulWidget {
 
 class _OnboardingViewState extends State<OnboardingView> {
   late final List<OnBoardingData> _list = _onBoardingList();
-  PageController pageController = PageController();
+  final PageController _pageController = PageController();
   int currentIndex = 0;
 
-  List<OnBoardingData> _onBoardingList() =>
-      [
+  List<OnBoardingData> _onBoardingList() => [
         OnBoardingData(
           title: AppString.onBoardingTitle1,
           subtitle: AppString.onBoardingSubTitle1,
@@ -47,7 +45,8 @@ class _OnboardingViewState extends State<OnboardingView> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,elevation: 0,
+        backgroundColor: Colors.white,
+        elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.white,
           statusBarBrightness: Brightness.dark,
@@ -58,14 +57,21 @@ class _OnboardingViewState extends State<OnboardingView> {
         child: PageView.builder(
           itemCount: _list.length,
           physics: BouncingScrollPhysics(),
-          controller: pageController,
-          onPageChanged: (index) => currentIndex = index,
-          itemBuilder: (BuildContext context, int index) =>
-              PageViewWidget(onBoardingData: _list[index],),
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              currentIndex = index;
+            });
+          },
+          itemBuilder: (BuildContext context, int index) => PageViewWidget(
+            onBoardingData: _list[index],
+          ),
         ),
       ),
+      bottomSheet: BottomSheetWidget(
+          currentIndex: currentIndex,
+          pageController: _pageController,
+          list: _list),
     );
   }
 }
-
-
