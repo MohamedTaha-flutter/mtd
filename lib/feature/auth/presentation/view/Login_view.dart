@@ -31,6 +31,7 @@ class _LoginViewState extends State<LoginView> {
             children: [
               Image(image: AssetImage("assets/images/FINAL-LOGO.png")),
               TextFormField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   hintText: AppString.username,
                 ),
@@ -39,6 +40,7 @@ class _LoginViewState extends State<LoginView> {
                 height: 25,
               ),
               TextFormField(
+                keyboardType: TextInputType.visiblePassword,
                 decoration: InputDecoration(
                   hintText: AppString.password,
                 ),
