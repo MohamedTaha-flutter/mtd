@@ -17,5 +17,4 @@ class AppString {
   static const password = 'Password';
   static const forgetPassword = 'Forget password';
   static const notAMember = 'Not a member ? Sign up';
-
 }

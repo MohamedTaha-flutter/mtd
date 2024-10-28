@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mtb/core/app_string/string.dart';
+import 'package:mtb/core/constant/constant.dart';
 import 'package:mtb/core/constant/fontStyle.dart';
+import 'package:mtb/feature/auth/presentation/widget/auth_button.dart';
+import 'package:mtb/feature/auth/presentation/widget/auth_text_form_field.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -18,9 +21,9 @@ class _LoginViewState extends State<LoginView> {
         backgroundColor: Colors.white,
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: Colors.white,
-          statusBarBrightness: Brightness.dark,
-        ),
+            statusBarColor: Colors.white,
+            statusBarBrightness: Brightness.dark,
+            statusBarIconBrightness: Brightness.dark),
       ),
       backgroundColor: Colors.white,
       body: Padding(
@@ -29,34 +32,24 @@ class _LoginViewState extends State<LoginView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image(image: AssetImage("assets/images/FINAL-LOGO.png")),
-              TextFormField(
+              authImage,
+              AuthTextFormField(
+                hintText: AppString.username,
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  hintText: AppString.username,
-                ),
               ),
               SizedBox(
                 height: 25,
               ),
-              TextFormField(
+              AuthTextFormField(
+                hintText: AppString.password,
                 keyboardType: TextInputType.visiblePassword,
-                decoration: InputDecoration(
-                  hintText: AppString.password,
-                ),
               ),
               SizedBox(
                 height: 50,
               ),
-              SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      AppString.login,
-                      style: AppText.text18.copyWith(color: Colors.white),
-                    ),
-                  )),
+              AuthButton(
+                buttonName: AppString.login,
+              ),
               Row(
                 children: [
                   TextButton(
