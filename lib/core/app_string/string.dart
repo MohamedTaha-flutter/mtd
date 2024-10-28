@@ -17,4 +17,12 @@ class AppString {
   static const password = 'Password';
   static const forgetPassword = 'Forget password';
   static const notAMember = 'Not a member ? Sign up';
+  static const name = 'Name';
+  static const mobileNumber = 'Mobile Number';
+  static const email = 'Email';
+  static const profilePicture = 'Profile Picture';
+  static const alreadyHaveAnAccount = 'Already have an account ? Login';
+  static const register = 'Register';
+  static const resetPassword = 'Reset Password';
+  static const didNotReceive = 'Ddn’t receive email ? Resend';
 }

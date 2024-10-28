@@ -42,14 +42,17 @@ class Themes {
 
     // Input decoration theme
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: EdgeInsets.all(8.w), // Responsive padding
+      contentPadding: EdgeInsets.all(8.w),
+      // Responsive padding
       hintStyle: AppText.smallText14,
       labelStyle: AppText.smallText14,
       errorStyle: AppText.smallText14.copyWith(color: Colors.red),
 
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: AppColor.gray, width: 1.w), // Responsive border width
-        borderRadius: BorderRadius.all(Radius.circular(8.r)), // Responsive radius
+        borderSide: BorderSide(color: AppColor.gray, width: 1.w),
+        // Responsive border width
+        borderRadius:
+            BorderRadius.all(Radius.circular(8.r)), // Responsive radius
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(color: AppColor.mainColor, width: 1.w),

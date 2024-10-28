@@ -4,17 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mtb/core/app_string/string.dart';
 import 'package:mtb/core/constant/constant.dart';
 import 'package:mtb/core/constant/fontStyle.dart';
+import 'package:mtb/feature/auth/presentation/view/forget_password.dart';
+import 'package:mtb/feature/auth/presentation/view/register_view.dart';
 import 'package:mtb/feature/auth/presentation/widget/auth_button.dart';
 import 'package:mtb/feature/auth/presentation/widget/auth_text_form_field.dart';
 
-class LoginView extends StatefulWidget {
+class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
-  @override
-  State<LoginView> createState() => _LoginViewState();
-}
-
-class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,14 +51,18 @@ class _LoginViewState extends State<LoginView> {
               Row(
                 children: [
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        goTo(context, (context) => ForgetPasswordView());
+                      },
                       child: Text(
                         AppString.forgetPassword,
                         style: AppText.text12,
                       )),
                   Spacer(),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        goTo(context, (context) => RegisterView());
+                      },
                       child: Text(
                         AppString.notAMember,
                         style: AppText.text12,
