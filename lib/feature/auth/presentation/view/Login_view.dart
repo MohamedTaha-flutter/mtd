@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mtb/core/app_string/string.dart';
 import 'package:mtb/core/constant/constant.dart';
 import 'package:mtb/core/constant/fontStyle.dart';
@@ -38,14 +39,14 @@ class _LoginViewState extends State<LoginView> {
                 keyboardType: TextInputType.emailAddress,
               ),
               SizedBox(
-                height: 25,
+                height: 25.h,
               ),
               AuthTextFormField(
                 hintText: AppString.password,
                 keyboardType: TextInputType.visiblePassword,
               ),
               SizedBox(
-                height: 50,
+                height: 50.h,
               ),
               AuthButton(
                 buttonName: AppString.login,
