@@ -8,6 +8,7 @@ import 'package:mtb/feature/auth/presentation/view/forget_password.dart';
 import 'package:mtb/feature/auth/presentation/view/register_view.dart';
 import 'package:mtb/feature/auth/presentation/widget/auth_button.dart';
 import 'package:mtb/feature/auth/presentation/widget/auth_text_form_field.dart';
+import 'package:mtb/feature/layout/presentation/view/layout_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -47,6 +48,9 @@ class LoginView extends StatelessWidget {
               ),
               AuthButton(
                 buttonName: AppString.login,
+                onPressed: () {
+                  goTo(context, (context) => LayoutView());
+                },
               ),
               Row(
                 children: [
