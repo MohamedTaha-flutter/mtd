@@ -16,9 +16,9 @@ class AppText {
 
   static TextStyle smallText14 = TextStyle(
     fontFamily: FontFamily.fontFamily,
-    fontSize: 14.sp,  // Added .sp
-    fontWeight: FontWeight.w300,
-    color: AppColor.gray,
+    fontSize: 16.sp,  // Added .sp
+    fontWeight: FontWeight.bold,
+    color: Colors.grey[800],
   );
 
   static TextStyle mediumText16 = TextStyle(

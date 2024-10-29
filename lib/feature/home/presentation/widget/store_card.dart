@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mtb/core/constant/constant.dart';
+import 'package:mtb/feature/details/prsentation/view/details_view.dart';
 
 class StoreCard extends StatelessWidget {
   final String imagePath;
@@ -8,14 +11,19 @@ class StoreCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        height: 100,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(imagePath),
-            fit: BoxFit.cover,
+      child: GestureDetector(
+        onTap: () {
+          goTo(context, (context) => DetailsView());
+        },
+        child: Container(
+          height: 100.h,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.circular(8.0),
           ),
-          borderRadius: BorderRadius.circular(8.0),
         ),
       ),
     );

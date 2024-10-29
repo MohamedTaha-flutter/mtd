@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mtb/core/constant/constant.dart';
+import 'package:mtb/feature/details/prsentation/view/details_view.dart';
 
 class ServiceCard extends StatelessWidget {
   final String title;
@@ -12,17 +14,23 @@ class ServiceCard extends StatelessWidget {
     return Expanded(
       child: Column(
         children: [
-          Container(
-            height: 120.h,
-            width: 120.h,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(imagePath,),
-                fit: BoxFit.fill,
+          GestureDetector(
+            onTap: ()
+            {
+              goTo(context, (context)=>DetailsView());
+            },
+            child: Container(
+              height: 120.h,
+              width: 120.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(imagePath,),
+                  fit: BoxFit.fill,
 
+                ),
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(8.0),
               ),
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(8.0),
             ),
           ),
           SizedBox(height: 4),

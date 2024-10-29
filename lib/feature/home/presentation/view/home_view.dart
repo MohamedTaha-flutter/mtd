@@ -87,7 +87,7 @@ class HomeView extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                 itemBuilder: (context, index) => ServiceCard(
                   title: 'First Service',
-                  imagePath: 'assets/images/img_2.png',
+                  imagePath: 'assets/images/img_3.png',
                 ),
                 separatorBuilder: (context, index) => SizedBox(width: 10.w),
                 itemCount: 10,
